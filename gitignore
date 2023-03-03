@@ -1,0 +1,61 @@
+# ignore ALL .pyc files
+*.pyc
+
+# ignore ALL .tif files
+*.tif 
+
+# ignore ALL .png files
+*.png
+
+# ignore ALL files in ANY directory named tmp
+tmp/
+
+# ignore ALL files in ANY directory named tmp
+__pycache__/
+
+# ignore ALL files in ANY directory named tmp
+dask-worker-space/
+
+# ignore ALL .yml files
+*.yml
+# ignore ALL .txt files
+*.txt
+
+# ignore ALL .txt files
+dask-worker-space/
+
+testing/
+
+# ignore ALL .out files
+*.out
+
+# ignore ALL .zarr files
+*.zarr
+
+
+# ignore ALL .zarr files
+*.pkl
+
+*.vrt
+
+*.gpkg
+
+*.nc
+*.shp
+*.shx
+*.qmd
+*.prj
+*.dbf
+*.cpg
+*.json
+*.rst
+*.hdf
+*.xml
+*.csv
+*.zip
+*.tfw
+*.ovr
+*.tfw
+*.sbn
+*.sbx
+*.log
