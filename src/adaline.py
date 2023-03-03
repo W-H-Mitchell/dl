@@ -28,7 +28,6 @@ class AdalineGD:
         self.eta = eta
         self.n_iter = n_iter
         self.random_state = random_state
-    
 
     def fit(self, X, y, n_iter):
         """ Fit training data.
