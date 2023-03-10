@@ -52,15 +52,14 @@ class AdalineGD:
 
         for _ in range(n_iter):
             net_input = self.net_input(X)
-            # Note that the "activation" method has no effect
-            # in the code in this case.
-            # The purpose of the activation is more highlight where it   
-            # would be changed. For instance to a sigmoid function in logistic regression.
+            # Note that the "activation" method has no effect.
+            # The purpose of the activation is more highlight where it would be
+            # changed. For instance to a sigmoid function in logistic regression.
             output = self.activation(net_input)
             errors = (y - output)
             self.w_ += self.eta * 2.0 * X.T.dot(errors) / X.shape[0]
             self.b_ += self.eta * 2.0 * errors.mean()
-            loss = (errors**2).mean()
+            loss = (errors**2).mean() # mean square error 
             self.losses_.append(loss)
         return self
 
@@ -73,7 +72,7 @@ class AdalineGD:
         return X
 
     def predict(self, X):
-        """Return class label after unit step"""
+        """Return class label based on a threshold (0.5 in this case) after unit step"""
         return np.where(self.activation(self.net_input(X)) >= 0.5, 1, 0)
 
 
@@ -156,3 +155,4 @@ class AdalineSGD:
     def predict(self, X):
         """Return class label after unit step"""
         return np.where(self.activation(self.net_input(X)) >= 0.5, 1, 0)
+    
